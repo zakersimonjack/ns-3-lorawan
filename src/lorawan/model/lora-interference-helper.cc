@@ -7,6 +7,7 @@
  */
 
 #include "lora-interference-helper.h"
+#include "ns3/log.h"
 
 #include "lora-utils.h"
 

@@ -7,6 +7,7 @@
  */
 
 #include "lora-phy-helper.h"
+#include "ns3/log.h"
 
 #include "ns3/simple-gateway-lora-phy.h"
 

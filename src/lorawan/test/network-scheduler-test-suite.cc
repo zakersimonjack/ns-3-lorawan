@@ -8,6 +8,7 @@
 
 // An essential include is test.h
 #include "ns3/test.h"
+#include "ns3/log.h"
 
 // Include headers of classes to test
 #include "ns3/network-scheduler.h"

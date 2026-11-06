@@ -7,6 +7,7 @@
  */
 
 #include "gateway-status.h"
+#include "ns3/log.h"
 
 #include "gateway-lorawan-mac.h"
 

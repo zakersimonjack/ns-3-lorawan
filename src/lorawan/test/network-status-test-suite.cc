@@ -14,6 +14,7 @@
  */
 
 #include "utilities.h"
+#include "ns3/log.h"
 
 // An essential include is test.h
 #include "ns3/test.h"

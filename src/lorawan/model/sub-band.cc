@@ -7,6 +7,7 @@
  */
 
 #include "sub-band.h"
+#include "ns3/log.h"
 
 #include "logical-lora-channel.h"
 

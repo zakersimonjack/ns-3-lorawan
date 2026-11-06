@@ -7,6 +7,8 @@
  */
 
 #include "gateway-lorawan-mac.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "lora-net-device.h"
 #include "lora-phy.h"

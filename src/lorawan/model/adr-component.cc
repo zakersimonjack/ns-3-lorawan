@@ -7,6 +7,8 @@
  */
 
 #include "adr-component.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "class-a-end-device-lorawan-mac.h"
 
@@ -51,6 +53,16 @@ AdrComponent::GetTypeId()
                                           "max",
                                           AdrComponent::MINIMUM,
                                           "min"))
+            .AddAttribute("MarginOffset",
+                          "Safety margin (dB) subtracted from the SNR margin "
+                          "before stepping to faster data rates / lower power "
+                          "(Semtech recommends ~10 dB; the upstream algorithm "
+                          "consumed the full margin and sat links on the "
+                          "sensitivity cliff — added for "
+                          "ms-lora-network-planner)",
+                          DoubleValue(0.0),
+                          MakeDoubleAccessor(&AdrComponent::m_marginOffset),
+                          MakeDoubleChecker<double>(0.0, 40.0))
             .AddAttribute("HistoryRange",
                           "Number of packets to use for averaging",
                           IntegerValue(20),
@@ -204,7 +216,7 @@ AdrComponent::AdrImplementation(uint8_t* newDataRate,
 
     // Compute the SNR margin taking into consideration the SNR of
     // previously received packets
-    double margin_SNR = m_SNR - req_SNR;
+    double margin_SNR = m_SNR - req_SNR - m_marginOffset;
 
     NS_LOG_DEBUG("Margin = " << margin_SNR);
 

@@ -7,6 +7,8 @@
  */
 
 #include "simple-gateway-lora-phy.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "lora-channel.h"
 #include "lora-tag.h"
@@ -92,6 +94,15 @@ SimpleGatewayLoraPhy::StartReceive(Ptr<Packet> packet,
                                    double rxPowerDbm,
                                    Time duration)
 {
+    // Drop packets on frequencies this gateway is not listening to (the
+    // upstream port declares m_frequenciesHz but never enforces it — added
+    // for ms-lora-network-planner's per-gateway channel plans)
+    if (!IsOnFrequency(frequencyHz))
+    {
+        NS_LOG_DEBUG("Dropping packet at " << frequencyHz
+                     << " Hz: gateway not listening on this frequency");
+        return;
+    }
     NS_LOG_FUNCTION(this << packet << frequencyHz << iqPolarity << unsigned(spreadingFactor)
                          << rxPowerDbm << duration);
 

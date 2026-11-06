@@ -7,6 +7,9 @@
  */
 
 #include "lora-radio-energy-model.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
+#include "ns3/assert.h"
 
 #include "lora-tx-current-model.h"
 

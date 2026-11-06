@@ -7,6 +7,7 @@
  */
 
 #include "lora-radio-energy-model-helper.h"
+#include "ns3/assert.h"
 
 #include "ns3/lora-net-device.h"
 #include "ns3/lora-radio-energy-model.h"

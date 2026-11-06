@@ -170,6 +170,7 @@ class AdrComponent : public NetworkControllerComponent
                //!< levels ranging from 7 to 12 (the SNR values are in dB).
 
     bool m_toggleTxPower; //!< Whether to control transmission power of end devices or not
+    double m_marginOffset = 0.0; //!< Safety margin [dB] subtracted from the SNR margin (see attribute)
 };
 
 } // namespace lorawan

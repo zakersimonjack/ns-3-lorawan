@@ -12,6 +12,8 @@
  */
 
 #include "utilities.h"
+#include "ns3/log.h"
+#include "ns3/assert.h"
 
 // An essential include is test.h
 #include "ns3/application.h"

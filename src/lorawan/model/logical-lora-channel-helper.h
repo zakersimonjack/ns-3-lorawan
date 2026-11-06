@@ -96,6 +96,15 @@ class LogicalLoraChannelHelper : public SimpleRefCount<LogicalLoraChannelHelper>
     void SetChannel(uint8_t chIndex, Ptr<LogicalLoraChannel> channel);
 
     /**
+     * Resize the channel storage (added for ms-lora-network-planner's
+     * explicit channel plans: shrink below the constructor size to drop the
+     * region-default channels).
+     *
+     * @param size The new number of channel slots.
+     */
+    void Resize(uint8_t size);
+
+    /**
      * Add a new SubBand.
      *
      * @param subBand A pointer to the SubBand that needs to be added.

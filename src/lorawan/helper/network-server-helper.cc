@@ -9,6 +9,7 @@
  */
 
 #include "network-server-helper.h"
+#include "ns3/log.h"
 
 #include "ns3/adr-component.h"
 #include "ns3/network-server.h"

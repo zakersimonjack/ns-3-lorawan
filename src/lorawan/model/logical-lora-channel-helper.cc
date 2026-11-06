@@ -7,6 +7,7 @@
  */
 
 #include "logical-lora-channel-helper.h"
+#include "ns3/log.h"
 
 #include "ns3/simulator.h"
 
@@ -59,6 +60,13 @@ LogicalLoraChannelHelper::SetChannel(uint8_t chIndex, Ptr<LogicalLoraChannel> ch
     NS_LOG_FUNCTION(this << unsigned(chIndex) << channel);
     NS_ASSERT_MSG(m_channelVec.size() > chIndex, "ChIndex > channel storage bounds");
     m_channelVec.at(chIndex) = channel;
+}
+
+void
+LogicalLoraChannelHelper::Resize(uint8_t size)
+{
+    NS_LOG_FUNCTION(this << static_cast<unsigned>(size));
+    m_channelVec.resize(size);
 }
 
 void

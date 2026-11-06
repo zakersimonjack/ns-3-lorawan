@@ -7,6 +7,8 @@
  */
 
 #include "lora-packet-tracker.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "ns3/lorawan-mac-header.h"
 #include "ns3/simulator.h"

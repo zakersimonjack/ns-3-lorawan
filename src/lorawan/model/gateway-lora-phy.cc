@@ -7,6 +7,9 @@
  */
 
 #include "gateway-lora-phy.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
+#include "ns3/assert.h"
 
 namespace ns3
 {
@@ -176,6 +179,13 @@ GatewayLoraPhy::AddFrequency(uint32_t frequencyHz)
     m_frequenciesHz.push_back(frequencyHz);
 
     NS_ASSERT(m_frequenciesHz.size() <= 8);
+}
+
+void
+GatewayLoraPhy::ClearFrequencies()
+{
+    NS_LOG_FUNCTION(this);
+    m_frequenciesHz.clear();
 }
 
 } // namespace lorawan

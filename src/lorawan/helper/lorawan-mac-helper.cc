@@ -7,6 +7,8 @@
  */
 
 #include "lorawan-mac-helper.h"
+#include "ns3/log.h"
+#include "ns3/assert.h"
 
 #include "ns3/class-a-end-device-lorawan-mac.h"
 #include "ns3/end-device-lora-phy.h"

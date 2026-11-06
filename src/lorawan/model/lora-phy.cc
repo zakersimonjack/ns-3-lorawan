@@ -7,6 +7,8 @@
  */
 
 #include "lora-phy.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "lora-channel.h"
 

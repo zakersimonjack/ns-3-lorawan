@@ -12,6 +12,8 @@
  */
 
 #include "ns3/core-module.h"
+#include "ns3/simulator.h"
+#include "ns3/log.h"
 #include "ns3/lorawan-module.h"
 #include "ns3/mobility-helper.h"
 

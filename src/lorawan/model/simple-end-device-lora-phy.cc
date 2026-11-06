@@ -7,6 +7,8 @@
  */
 
 #include "simple-end-device-lora-phy.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "lora-channel.h"
 #include "lora-tag.h"

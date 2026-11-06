@@ -8,6 +8,9 @@
  */
 
 #include "network-server.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
+#include "ns3/assert.h"
 
 #include "class-a-end-device-lorawan-mac.h"
 #include "gateway-lorawan-mac.h"

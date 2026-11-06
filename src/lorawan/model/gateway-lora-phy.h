@@ -91,6 +91,12 @@ class GatewayLoraPhy : public LoraPhy
      */
     void AddFrequency(uint32_t frequencyHz);
 
+    /**
+     * Clear the list of frequencies this gateway is listening to (added for
+     * ms-lora-network-planner's per-gateway channel plans).
+     */
+    void ClearFrequencies();
+
   protected:
     /**
      * This class represents a configurable reception path.

@@ -7,6 +7,7 @@
  */
 
 #include "lora-tag.h"
+#include "ns3/object.h"
 
 namespace ns3
 {

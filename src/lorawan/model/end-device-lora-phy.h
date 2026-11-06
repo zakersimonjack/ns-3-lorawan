@@ -12,6 +12,7 @@
 #define END_DEVICE_LORA_PHY_H
 
 #include "lora-phy.h"
+#include "ns3/log.h"
 
 #include "ns3/traced-value.h"
 

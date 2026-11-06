@@ -8,6 +8,8 @@
  */
 
 #include "network-status.h"
+#include "ns3/object.h"
+#include "ns3/log.h"
 
 #include "class-a-end-device-lorawan-mac.h"
 #include "lora-tag.h"
